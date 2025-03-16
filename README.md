@@ -29,10 +29,31 @@ WHERE cl > 300
 
 Получите количество фильмов, продолжительность которых больше средней продолжительности всех фильмов.
 
+```
+select count(1)  
+from film f
+where length > (
+	select avg(length) from film
+	)
+```
+
+[alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/2.png)
+
 ### Задание 3
 
 Получите информацию, за какой месяц была получена наибольшая сумма платежей, и добавьте информацию по количеству аренд за этот месяц.
 
+```
+SELECT DATE_FORMAT(payment_date, '%m-%Y') AS Месяц, SUM(amount) AS Сумма, count(rental_id) AS Аренды
+FROM payment AS pp
+GROUP BY Месяц
+HAVING Сумма = (SELECT max(ss) FROM 
+(SELECT DATE_FORMAT(payment_date, '%m-%Y') AS dd, SUM(amount) AS ss 
+FROM payment
+GROUP BY dd) AS qss)
+```
+
+[alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/3.png)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
