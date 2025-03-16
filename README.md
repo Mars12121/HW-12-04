@@ -37,7 +37,7 @@ where length > (
 	)
 ```
 
-[alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/2.png)
+![alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/2.png)
 
 ### Задание 3
 
@@ -53,7 +53,7 @@ FROM payment
 GROUP BY dd) AS qss)
 ```
 
-[alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/3.png)
+![alt text](https://github.com/Mars12121/hw-12-04/blob/main/img/3.png)
 
 ## Дополнительные задания (со звёздочкой*)
 Эти задания дополнительные, то есть не обязательные к выполнению, и никак не повлияют на получение вами зачёта по этому домашнему заданию. Вы можете их выполнить, если хотите глубже шире разобраться в материале.
